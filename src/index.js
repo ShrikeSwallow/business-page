@@ -11,11 +11,20 @@ const htmlInit = (() => {
     const navButton = document.createElement("button");
     navButton.setAttribute("type", "button");
     navButton.textContent = element;
+    navButton.classList.add(element.trim().toLowerCase().replaceAll(" ", "-"));
     nav.appendChild(navButton);
   });
   const content = document.createElement("div");
   content.id = "content";
   document.body.appendChild(content);
   console.log("Generation successful!");
-  return content;
 })();
+
+const content = document.querySelector("#content");
+const homeBtn = document.querySelector(".home");
+
+homeBtn.addEventListener("click", () => {
+  content.innerHTML = "";
+  content.appendChild(home.headline);
+  content.appendChild(home.copy);
+});
