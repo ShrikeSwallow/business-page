@@ -1,3 +1,4 @@
+const container = document.createElement("div");
 const headline = document.createElement("h1");
 headline.textContent = "About Us";
 const subheadline = document.createElement("h2");
@@ -9,4 +10,10 @@ contactUs.textContent = "Contact Us";
 const contactCopy = document.createElement("p");
 contactCopy.textContent = `Need assistance with your print project? Our friendly team is here to help. Reach out to us for a free consultation and quote.`;
 
-export { headline, subheadline, copy, contactUs, contactCopy };
+container.appendChild(headline);
+container.appendChild(subheadline);
+container.appendChild(copy);
+container.appendChild(contactUs);
+container.append(contactCopy);
+
+export { container };

@@ -1,3 +1,4 @@
+const container = document.createElement("div");
 const headline = document.createElement("h1");
 headline.textContent = "Services";
 const subheadline = document.createElement("h2");
@@ -15,4 +16,8 @@ listItems.forEach((listItem) => {
   list.appendChild(item);
 });
 
-export { headline, subheadline, list };
+container.appendChild(headline);
+container.appendChild(subheadline);
+container.appendChild(list);
+
+export { container };
