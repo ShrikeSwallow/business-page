@@ -1,5 +1,6 @@
 import "./styles.css";
 import * as home from "./home.js";
+import * as services from "./services.js";
 
 const htmlInit = (() => {
   const header = document.createElement("header");
@@ -22,9 +23,17 @@ const htmlInit = (() => {
 
 const content = document.querySelector("#content");
 const homeBtn = document.querySelector(".home");
+const servicesBtn = document.querySelector(".services");
 
 homeBtn.addEventListener("click", () => {
   content.innerHTML = "";
   content.appendChild(home.headline);
   content.appendChild(home.copy);
+});
+
+servicesBtn.addEventListener("click", () => {
+  content.innerHTML = "";
+  content.appendChild(services.headline);
+  content.appendChild(services.subheadline);
+  content.appendChild(services.list);
 });
