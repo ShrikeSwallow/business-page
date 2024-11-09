@@ -6,6 +6,11 @@ body {
   grid-template-rows: 30vh 1fr;
 }
 
+p,
+li {
+  line-height: 1.5;
+}
+
 header {
   background-color: #06b6d4;
   background-image: url("./images/shutterstock_197903273.webp");
@@ -36,7 +41,7 @@ button {
 
 .active {
   background-color: #ecfeff;
-  box-shadow: 0px 10px 5px 1px #ecfeff;
+  box-shadow: 0px 7px 5px 1px #ecfeff;
 }
 
 #content {
