@@ -6,6 +6,7 @@ html {
 
 body {
   background-color: #ecfeff;
+  color: #0c0a09;
   display: grid;
   grid-template-rows: 300px 1fr;
 }
