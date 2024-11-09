@@ -17,6 +17,7 @@ const htmlInit = (() => {
     navButton.classList.add(className);
     nav.appendChild(navButton);
   });
+
   const content = document.createElement("div");
   content.id = "content";
   document.body.appendChild(content);
@@ -25,20 +26,30 @@ const htmlInit = (() => {
 })();
 
 const content = document.querySelector("#content");
+const homeBtn = document.querySelector(".home");
+const serviceBtn = document.querySelector(".services");
+const aboutBtn = document.querySelector(".about");
+homeBtn.classList.add("active");
 
 const navButtons = document.querySelectorAll("nav button");
 navButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
+    navButtons.forEach((button) => {
+      button.classList.remove("active");
+    });
     content.textContent = "";
     switch (event.currentTarget.classList.value) {
       case "home":
         content.appendChild(home.container);
+        homeBtn.classList.add("active");
         break;
       case "services":
         content.appendChild(services.container);
+        serviceBtn.classList.add("active");
         break;
       case "about":
         content.appendChild(about.container);
+        aboutBtn.classList.add("active");
         break;
     }
   });
