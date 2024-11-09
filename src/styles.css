@@ -1,14 +1,29 @@
 @import "../node_modules/modern-normalize/modern-normalize.css";
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   background-color: #ecfeff;
   display: grid;
-  grid-template-rows: 30vh 1fr;
+  grid-template-rows: 300px 1fr;
 }
 
 p,
 li {
   line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+}
+ul {
+  margin: 0;
 }
 
 header {
