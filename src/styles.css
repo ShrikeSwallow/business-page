@@ -1,1 +1,13 @@
 @import "../node_modules/modern-normalize/modern-normalize.css";
+
+body {
+  background-color: #ecfeff;
+}
+
+header {
+  height: 20vh;
+  background-color: #06b6d4;
+  background-image: url("./images/shutterstock_197903273.webp");
+  background-size: cover;
+  background-position-y: 65%;
+}
